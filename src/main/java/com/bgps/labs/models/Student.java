@@ -7,7 +7,7 @@ public class Student {
     private String surname;
     private Integer studyGroupId;
 
-    public Student(int id, String name, String secondName, String surname, Integer studyGroupId) {
+    public Student(int id, String surname, String name, String secondName, Integer studyGroupId) {
         this.id = id;
         this.name = name;
         this.secondName = secondName;

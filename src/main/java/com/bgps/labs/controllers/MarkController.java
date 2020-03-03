@@ -14,7 +14,7 @@ public class MarkController {
         _mark = mark;
     }
 
-    @GetMapping("/mark/{id}")
+    @GetMapping("/marks/{id}")
     public Mark getMarkById(@PathVariable int id){
         return _mark.get(id);
     }

@@ -2,9 +2,7 @@ package com.bgps.labs.controllers;
 
 import com.bgps.labs.daos.StudentJdbc;
 import com.bgps.labs.models.Student;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,5 +27,20 @@ public class StudentController {
     @GetMapping("/students/byGroupId/{id}")
     public List<Student> getByGroupId(@PathVariable int id){
         return _std.getByGroupId(id);
+    }
+
+    @PostMapping("/students/new")
+    public int addNewStudent(@RequestBody Student std){
+        return _std.add(std);
+    }
+
+    @PostMapping("/students/update")
+    public int updateStudent(@RequestBody Student std){
+        return _std.update(std);
+    }
+
+    @DeleteMapping("/students/delete/{id}")
+    public int deleteStudentById(@PathVariable int id){
+        return _std.delete(id);
     }
 }

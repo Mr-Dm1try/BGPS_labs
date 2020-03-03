@@ -5,6 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
+import org.springframework.util.StringUtils;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -37,15 +38,15 @@ public class StudentJdbc {
     }
 
     public int update(@NotNull Student std){
-        StringBuilder sql = new StringBuilder("update STUDENT set");
-        if (!std.getSurname().isEmpty())
-            sql.append("surname = ").append(std.getSurname()).append(", ");
-        if (!std.getName().isEmpty())
-            sql.append("name = ").append(std.getName()).append(", ");
-        if (!std.getSecondName().isEmpty())
-            sql.append("second_name = ").append(std.getSecondName()).append(", ");
+        StringBuilder sql = new StringBuilder("update STUDENT set ");
+        if (!StringUtils.isEmpty(std.getSurname()))
+            sql.append("surname = '").append(std.getSurname()).append("', ");
+        if (!StringUtils.isEmpty(std.getName()))
+            sql.append("name = '").append(std.getName()).append("', ");
+        if (!StringUtils.isEmpty(std.getSecondName()))
+            sql.append("second_name = '").append(std.getSecondName()).append("', ");
         if (std.getStudyGroupId() != null)
-            sql.append("surname = ").append(std.getSurname());
+            sql.append("study_group_id = '").append(std.getStudyGroupId()).append("' ");
         else if (sql.charAt(sql.length() - 2) == ',')
             sql.deleteCharAt(sql.length() - 2);
         sql.append("where id = ?");

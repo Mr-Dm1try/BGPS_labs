@@ -32,17 +32,17 @@ public class JournalJdbc {
     }
 
     public int update(@NotNull JournalEntry je){
-        StringBuilder sql = new StringBuilder("update JOURNAL set");
+        StringBuilder sql = new StringBuilder("update JOURNAL set ");
         if (je.getStudentId() != null)
-            sql.append("student_id = ").append(je.getStudentId()).append(", ");
+            sql.append("student_id = '").append(je.getStudentId()).append("', ");
         if (je.getStudyPlanId() != null)
-            sql.append("study_plan_id = ").append(je.getStudyPlanId()).append(", ");
+            sql.append("study_plan_id = '").append(je.getStudyPlanId()).append("', ");
         if (je.isInTime() != null)
-            sql.append("in_time = ").append(je.isInTime()).append(", ");
+            sql.append("in_time = '").append(je.isInTime()).append("', ");
         if (je.getCount() != null)
-            sql.append("count = ").append(je.getCount());
+            sql.append("count = '").append(je.getCount()).append("', ");
         if (je.getMarkId() != null)
-            sql.append("mark_id = ").append(je.getMarkId());
+            sql.append("mark_id = ").append(je.getMarkId()).append("' ");
         else if (sql.charAt(sql.length() - 2) == ',')
             sql.deleteCharAt(sql.length() - 2);
         sql.append("where id = ?");
