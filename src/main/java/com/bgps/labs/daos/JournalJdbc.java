@@ -22,6 +22,14 @@ public class JournalJdbc {
         return jdbc.queryForObject("select * from JOURNAL where id = ?", new JournalMapper(), id);
     }
 
+    public List<JournalEntry> getByStudent(int stId){
+        return jdbc.query("select * from JOURNAL where STUDENT_ID = ?", new JournalMapper(), stId);
+    }
+
+    public List<JournalEntry> getByStudyPlan(int spId){
+        return jdbc.query("select * from JOURNAL where STUDY_PLAN_ID = ?", new JournalMapper(), spId);
+    }
+
     public List<JournalEntry> getAll(){
         return jdbc.query("select * from JOURNAL", new JournalMapper());
     }

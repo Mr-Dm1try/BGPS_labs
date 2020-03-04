@@ -19,6 +19,16 @@ public class JournalController {
         return _jrnl.get(id);
     }
 
+    @GetMapping("/journal/byStudent/{id}")
+    public List<JournalEntry> getEntriesByStudent(@PathVariable int id) {
+        return _jrnl.getByStudent(id);
+    }
+
+    @GetMapping("/journal/byStudyPlan/{id}")
+    public List<JournalEntry> getEntriesByStudyPlanId(@PathVariable int id) {
+        return _jrnl.getByStudyPlan(id);
+    }
+
     @GetMapping("/journal")
     public List<JournalEntry> getJournal(){
         return _jrnl.getAll();

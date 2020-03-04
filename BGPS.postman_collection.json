@@ -328,6 +328,50 @@
 					"response": []
 				},
 				{
+					"name": "ByStudent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/journal/byStudent/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"journal",
+								"byStudent",
+								"1"
+							]
+						},
+						"description": "Get entries by student id\n"
+					},
+					"response": []
+				},
+				{
+					"name": "ByStudyPlan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/journal/byStudyPlan/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"journal",
+								"byStudyPlan",
+								"1"
+							]
+						},
+						"description": "Get entries by study plan id"
+					},
+					"response": []
+				},
+				{
 					"name": "Update",
 					"request": {
 						"method": "POST",
