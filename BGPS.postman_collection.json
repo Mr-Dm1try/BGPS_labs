@@ -27,7 +27,54 @@
 						},
 						"description": "Get all students"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/students/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:34:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Дима\",\n        \"secondName\": \"Дмитриевич\",\n        \"surname\": \"Гайфулин\",\n        \"studyGroupId\": 1\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Арсений\",\n        \"secondName\": \"Марьянович\",\n        \"surname\": \"Поляк\",\n        \"studyGroupId\": 1\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Михаил\",\n        \"secondName\": \"Николаевич\",\n        \"surname\": \"Слинкин\",\n        \"studyGroupId\": 1\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Василий\",\n        \"secondName\": \"Александрович\",\n        \"surname\": \"Каженцев\",\n        \"studyGroupId\": 1\n    }\n]"
+						}
+					]
 				},
 				{
 					"name": "ById",
@@ -48,7 +95,54 @@
 						},
 						"description": "Get student by id"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "ById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/students/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:37:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Дима\",\n    \"secondName\": \"Дмитриевич\",\n    \"surname\": \"Гайфулин\",\n    \"studyGroupId\": 1\n}"
+						}
+					]
 				},
 				{
 					"name": "Update",
@@ -57,7 +151,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Дима\"\r\n}",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Дмитрий\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -78,7 +172,63 @@
 						},
 						"description": "Update student"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Дмитрий\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/students/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:38:32 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
 				},
 				{
 					"name": "New",
@@ -108,7 +258,63 @@
 						},
 						"description": "Create new student"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "New",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Леонид\",\r\n    \"surname\": \"Истратов\",\r\n    \"studyGroupId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/students/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students",
+										"new"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:38:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
 				},
 				{
 					"name": "Delete",
@@ -116,7 +322,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/students/delete/5",
+							"raw": "http://localhost:8080/students/delete/37",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -125,12 +331,60 @@
 							"path": [
 								"students",
 								"delete",
-								"5"
+								"37"
 							]
 						},
 						"description": "Delete student"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/students/delete/37",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"students",
+										"delete",
+										"37"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:39:22 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -157,7 +411,54 @@
 						},
 						"description": "Get all groups\n"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/studyGroups/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"studyGroups",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:51:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"ИКБО-03-16\"\n    }\n]"
+						}
+					]
 				},
 				{
 					"name": "ById",
@@ -178,7 +479,54 @@
 						},
 						"description": "Get group by id"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "ById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/studyGroups/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"studyGroups",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:51:48 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"ИКБО-03-16\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Update",
@@ -187,7 +535,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"id\": 1,\r\n    \"name\": \"ИКБО-03-16\"\r\n}",
+							"raw": "{\r\n\t\"id\": 1,\r\n    \"name\": \"ИКБО-02-16\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -208,7 +556,63 @@
 						},
 						"description": "Update group"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"id\": 1,\r\n    \"name\": \"ИКБО-02-16\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/studyGroups/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"studyGroups",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:52:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
 				},
 				{
 					"name": "New",
@@ -238,7 +642,63 @@
 						},
 						"description": "Add new group"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "New",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"ИКБО-02-16\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/studyGroups/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"studyGroups",
+										"new"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:52:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
 				},
 				{
 					"name": "Delete",
@@ -246,7 +706,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/studyGroups/delete/2",
+							"raw": "http://localhost:8080/studyGroups/delete/34",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -255,12 +715,60 @@
 							"path": [
 								"studyGroups",
 								"delete",
-								"2"
+								"34"
 							]
 						},
 						"description": "Delete group by id"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/studyGroups/delete/34",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"studyGroups",
+										"delete",
+										"34"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:52:33 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -274,7 +782,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "http://localhost:8080/marks/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"marks",
+								"1"
+							]
 						},
 						"description": "Get mark by id"
 					},
@@ -304,7 +821,53 @@
 						},
 						"description": "Get full journal"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/journal",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"journal"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:52:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"studentId\": 1,\n        \"studyPlanId\": 1,\n        \"inTime\": true,\n        \"count\": 1,\n        \"markId\": 5\n    },\n    {\n        \"id\": 2,\n        \"studentId\": 2,\n        \"studyPlanId\": 1,\n        \"inTime\": false,\n        \"count\": 1,\n        \"markId\": 4\n    },\n    {\n        \"id\": 3,\n        \"studentId\": 3,\n        \"studyPlanId\": 1,\n        \"inTime\": true,\n        \"count\": 1,\n        \"markId\": 5\n    },\n    {\n        \"id\": 4,\n        \"studentId\": 4,\n        \"studyPlanId\": 1,\n        \"inTime\": false,\n        \"count\": 1,\n        \"markId\": 4\n    }\n]"
+						}
+					]
 				},
 				{
 					"name": "ById",
@@ -325,7 +888,54 @@
 						},
 						"description": "Get entry by id\n"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "ById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/journal/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"journal",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:53:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"studentId\": 1,\n    \"studyPlanId\": 1,\n    \"inTime\": true,\n    \"count\": 1,\n    \"markId\": 5\n}"
+						}
+					]
 				},
 				{
 					"name": "ByStudent",
@@ -347,7 +957,55 @@
 						},
 						"description": "Get entries by student id\n"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "ByStudent",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/journal/byStudent/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"journal",
+										"byStudent",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:53:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"studentId\": 1,\n        \"studyPlanId\": 1,\n        \"inTime\": true,\n        \"count\": 1,\n        \"markId\": 5\n    }\n]"
+						}
+					]
 				},
 				{
 					"name": "ByStudyPlan",
@@ -369,13 +1027,70 @@
 						},
 						"description": "Get entries by study plan id"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "ByStudyPlan",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/journal/byStudyPlan/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"journal",
+										"byStudyPlan",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:53:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"studentId\": 1,\n        \"studyPlanId\": 1,\n        \"inTime\": true,\n        \"count\": 1,\n        \"markId\": 5\n    },\n    {\n        \"id\": 2,\n        \"studentId\": 2,\n        \"studyPlanId\": 1,\n        \"inTime\": false,\n        \"count\": 1,\n        \"markId\": 4\n    },\n    {\n        \"id\": 3,\n        \"studentId\": 3,\n        \"studyPlanId\": 1,\n        \"inTime\": true,\n        \"count\": 1,\n        \"markId\": 5\n    },\n    {\n        \"id\": 4,\n        \"studentId\": 4,\n        \"studyPlanId\": 1,\n        \"inTime\": false,\n        \"count\": 1,\n        \"markId\": 4\n    }\n]"
+						}
+					]
 				},
 				{
 					"name": "Update",
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"markId\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://localhost:8080/journal/update",
 							"protocol": "http",
@@ -390,13 +1105,78 @@
 						},
 						"description": "Update entry"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"markId\": 4\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/journal/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"journal",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:55:11 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
 				},
 				{
 					"name": "New",
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\": 1,\r\n    \"studyPlanId\": 2,\r\n    \"inTime\": true,\r\n    \"count\": 1,\r\n    \"markId\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://localhost:8080/journal/new",
 							"protocol": "http",
@@ -411,7 +1191,63 @@
 						},
 						"description": "Add new entry"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "New",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"studentId\": 1,\r\n    \"studyPlanId\": 2,\r\n    \"inTime\": true,\r\n    \"count\": 1,\r\n    \"markId\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/journal/new",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"journal",
+										"new"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:56:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
 				},
 				{
 					"name": "Delete",
@@ -419,7 +1255,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/journal/delete/1",
+							"raw": "http://localhost:8080/journal/delete/5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -428,12 +1264,60 @@
 							"path": [
 								"journal",
 								"delete",
-								"1"
+								"5"
 							]
 						},
 						"description": "Delete entry"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/journal/delete/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"journal",
+										"delete",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 04 Mar 2020 12:58:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "1"
+						}
+					]
 				}
 			],
 			"protocolProfileBehavior": {}

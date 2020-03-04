@@ -36,7 +36,7 @@ public class JournalJdbc {
 
     public int add(@NotNull JournalEntry je){
         return jdbc.update("insert into JOURNAL (STUDENT_ID, STUDY_PLAN_ID, IN_TIME, COUNT, MARK_ID) values (?, ?, ?, ?, ?)",
-                je.getStudentId(), je.getStudentId(), je.isInTime(), je.getCount(), je.getMarkId());
+                je.getStudentId(), je.getStudyPlanId(), je.isInTime(), je.getCount(), je.getMarkId());
     }
 
     public int update(@NotNull JournalEntry je){
@@ -50,7 +50,7 @@ public class JournalJdbc {
         if (je.getCount() != null)
             sql.append("count = '").append(je.getCount()).append("', ");
         if (je.getMarkId() != null)
-            sql.append("mark_id = ").append(je.getMarkId()).append("' ");
+            sql.append("mark_id = '").append(je.getMarkId()).append("' ");
         else if (sql.charAt(sql.length() - 2) == ',')
             sql.deleteCharAt(sql.length() - 2);
         sql.append("where id = ?");
