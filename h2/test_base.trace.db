@@ -1522,3 +1522,7 @@ java.sql.SQLClientInfoException: Client info name 'ApplicationName' not supporte
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "update JOURNAL set mark_id = 4[*]' where id = ?"
 Syntax error in SQL statement "update JOURNAL set mark_id = 4[*]' where id = ?"; SQL statement:
 update JOURNAL set mark_id = 4' where id = ? [42000-200]
+2020-03-12 20:20:06 jdbc[53]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "UPDATE STUDENT SET WHERE[*] ID = ?"; ожидалось "identifier"
+Syntax error in SQL statement "UPDATE STUDENT SET WHERE[*] ID = ?"; expected "identifier"; SQL statement:
+update STUDENT set where id = ? [42001-200]

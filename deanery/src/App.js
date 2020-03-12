@@ -80,7 +80,7 @@ class App extends React.Component {
 		]
 	];*/
 			
-	async componentDidMount() {	
+	componentDidMount() {	
 		Request.getJournal().then(j => this.setState({journal: j}));
 		Request.getStudents().then(s => this.setState({students: s}));
 	}
