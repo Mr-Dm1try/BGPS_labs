@@ -24,6 +24,11 @@ public class StudentController {
         return _std.getAll();
     }
 
+    @GetMapping("/students/local/all")
+    public List<Student> getAllLocalStudents(){
+        return _std.getAllLocal();
+    }
+
     @GetMapping("/students/byGroupId/{id}")
     public List<Student> getByGroupId(@PathVariable int id){
         return _std.getByGroupId(id);

@@ -58,6 +58,17 @@
             <version>16.0.2</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>net.progruzovik.bus</groupId>
+            <artifactId>bus-datasource-spring-jdbc</artifactId>
+            <version>1.0-DEAN</version>
+        </dependency>
+        <dependency>
+            <groupId>net.progruzovik.bus</groupId>
+            <artifactId>bus-messaging-spring-rest</artifactId>
+            <version>1.0-DEAN</version>
+        </dependency>
     </dependencies>
 
     <build>

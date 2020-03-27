@@ -27,6 +27,10 @@ public class StudentJdbc {
         return jdbc.query("select * from STUDENT", new StudentMapper());
     }
 
+    public List<Student> getAllLocal(){
+        return jdbc.query("select * from STUDENT_LOCAL", new StudentMapper());
+    }
+
     public List<Student> getByGroupId(int id)
     {
         return jdbc.query("select * from STUDENT WHERE study_group_id = ?", new StudentMapper(), id);
